@@ -5,23 +5,24 @@ given in the input using Newton's method*/
 import java.util.Scanner;
 
 public class NewtonsMethod {
-    public void sqrt(){
-        System.out.println("y0 = y − (14 − m) / 12\n" +
-                "x = y0 + y0\n" +
-                "/4 − y0\n" +
-                "/100 + y0\n" +
-                "/400\n" +
-                "m0 = m + 12 × ((14 − m) / 12) − 2\n" +
-                "d0 = (d + x + 31m0\n" +
-                "\n" +
-                "/ 12) mod 7");
+    public double sqrt( int c){
+        double epsilon= 1e-15;
+        double t=c;
+        double result=(t-(c/t));
+        while (Math.abs(t - c/t) > epsilon*t) {
+            t = (c/t + t) / 2.0;
+        }
+        return t;
 
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number to find Square Root");
+        //refer the formula for variables
+        int c= scanner.nextInt();
         NewtonsMethod nm = new NewtonsMethod();
-        nm.sqrt();
+        System.out.println(nm.sqrt(c));
 
     }
 
