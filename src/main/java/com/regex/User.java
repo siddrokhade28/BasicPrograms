@@ -2,7 +2,7 @@ package com.regex;
 
 public class User {
     private String firstName;
-//    private String lastName;
+    private String lastName;
 //    private String email;
 //    private String Phn;
 //    private String password;
@@ -49,18 +49,18 @@ public class User {
         }
     }
 
-//    public String getLastName() {
-//        return lastName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        if (Validator.isValidName(lastName)) {
-//            this.lastName = lastName;
-//        } else {
-//            System.out.println("Enter Valid Last name");
-//        }
-//
-//    }
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        if (Validator.isValidName(lastName)) {
+            this.lastName = lastName;
+        } else {
+            System.out.println("Enter Valid Last name");
+        }
+
+    }
 
 //    @Override
 //    public String toString() {

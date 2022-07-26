@@ -9,9 +9,9 @@ public class Main {
         System.out.println("Enter First name");
         String firstName= scanner.next();
         newUser.setFirstName(firstName);
-//        System.out.println("Enter Last name");
-//        String lastName= scanner.next();
-//        newUser.setLastName(lastName);
+        System.out.println("Enter Last name");
+        String lastName= scanner.next();
+        newUser.setLastName(lastName);
 //        System.out.println("Enter Email ID");
 //        String email= scanner.next();
 //        newUser.setEmail(email);
