@@ -5,18 +5,18 @@ public class User {
     private String lastName;
     private String email;
     private String Phn;
-//    private String password;
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        if (Validator.isValidpassword(password)) {
-//            this.password = password;
-//        } else System.out.println("Enter valid password");
-//    }
-//
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        if (Validator.isValidpassword(password)) {
+            this.password = password;
+        } else System.out.println("Enter valid password");
+    }
+
     public String getPhn() {
         return Phn;
     }
