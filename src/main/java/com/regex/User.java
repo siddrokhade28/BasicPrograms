@@ -4,7 +4,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-//    private String Phn;
+    private String Phn;
 //    private String password;
 //
 //    public String getPassword() {
@@ -17,16 +17,16 @@ public class User {
 //        } else System.out.println("Enter valid password");
 //    }
 //
-//    public String getPhn() {
-//        return Phn;
-//    }
-//
-//    public void setPhn(String phn) {
-//        if (Validator.isValidPhoneNo(phn)) {
-//            Phn = phn;
-//        } else System.out.println("Enter valid phone Number");
-//    }
-//
+    public String getPhn() {
+        return Phn;
+    }
+
+    public void setPhn(String phn) {
+        if (Validator.isValidPhoneNo(phn)) {
+            Phn = phn;
+        } else System.out.println("Enter valid phone Number");
+    }
+
     public String getEmail() {
         return email;
     }
