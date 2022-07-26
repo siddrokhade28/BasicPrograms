@@ -3,7 +3,7 @@ package com.regex;
 public class User {
     private String firstName;
     private String lastName;
-//    private String email;
+    private String email;
 //    private String Phn;
 //    private String password;
 //
@@ -27,15 +27,15 @@ public class User {
 //        } else System.out.println("Enter valid phone Number");
 //    }
 //
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        if (Validator.isValidEmail(email)) {
-//            this.email = email;
-//        } else System.out.println("Enter Valid email");
-//    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if (Validator.isValidEmail(email)) {
+            this.email = email;
+        } else System.out.println("Enter Valid email");
+    }
 
     public String getFirstName() {
         return firstName;

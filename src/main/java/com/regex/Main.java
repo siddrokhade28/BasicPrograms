@@ -12,9 +12,9 @@ public class Main {
         System.out.println("Enter Last name");
         String lastName= scanner.next();
         newUser.setLastName(lastName);
-//        System.out.println("Enter Email ID");
-//        String email= scanner.next();
-//        newUser.setEmail(email);
+        System.out.println("Enter Email ID");
+        String email= scanner.next();
+        newUser.setEmail(email);
 //
 //        System.out.println("Enter password");
 //        String pswd= scanner.next();
