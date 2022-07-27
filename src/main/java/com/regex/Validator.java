@@ -12,7 +12,7 @@ public class Validator {
     //Regex for Phone Number
     private static final String phoneRegex = "^([+][0-9]{2})?[\\s]?[1-9][0-9]{9}$";
     //Regex for Password
-    private static final String passwordRegex = "^(?=.*[A-Z])[A-Za-z0-9@$!%*?&]{8,}$";
+    private static final String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9@$!%*?&]{8,}$";
 
     // function to Validate First and Last Name
     public static boolean isValidName(String name) {
