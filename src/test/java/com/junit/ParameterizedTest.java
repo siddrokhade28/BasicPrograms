@@ -8,17 +8,17 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-
+//parameterized class
 @RunWith(Parameterized.class)
 public class ParameterizedTest {
     private String email;
     private boolean expectedResult;
-
+    //parameterized Constructor
     public ParameterizedTest(String email, boolean expectedResult) {
         this.email = email;
         this.expectedResult = expectedResult;
     }
-
+    //paasing the arrays as list to the constructor with annotation
     @Parameterized.Parameters
     public static Collection valueWithExpectedResult() {
         return Arrays.asList((new Object[][]{
@@ -34,11 +34,11 @@ public class ParameterizedTest {
 
         }));
     }
-
+    //function to validate email
     @Test
     public void givenStringWhenCheckedShouldReturnValidOrInvalid() {
         Validator obj = new Validator();
-        boolean result = obj.isValidName(this.email);
+        boolean result = obj.isValidEmail(this.email);
         Assert.assertEquals(this.expectedResult, result);
     }
 }
