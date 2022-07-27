@@ -1,6 +1,7 @@
 package com.regex;
 
 public class User {
+    // pojo class to set all the Variables
     private String firstName;
     private String lastName;
     private String email;
@@ -12,7 +13,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        if (Validator.isValidpassword(password)) {
+        if (Validator.isValidPassword(password)){
             this.password = password;
         } else System.out.println("Enter valid password");
     }
@@ -62,14 +63,14 @@ public class User {
 
     }
 
-//    @Override
-//    public String toString() {
-//        return "User{" +
-//                "firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", email='" + email + '\'' +
-//                ", Phn='" + Phn + '\'' +
-//                ", password='" + password + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", Phn='" + Phn + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //creating object of the pojo class to set values
         User newUser = new User();
+        //scanner object to take input from the user
         Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter First name");
 //        String firstName= scanner.next();
@@ -20,8 +22,8 @@ public class Main {
 //        newUser.setPhn(phn);
 ////
         System.out.println("Enter password");
-        String pswd= scanner.next();
-        newUser.setPassword(pswd);
+        String password= scanner.next();
+        newUser.setPassword(password);
 
         System.out.println(newUser);
 
