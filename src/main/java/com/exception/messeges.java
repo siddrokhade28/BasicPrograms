@@ -12,16 +12,20 @@ class messeges {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
+            //Taking input form the user
             System.out.println("Enter your mood");
             String msg = scanner.nextLine();
+            //checking weather the msg is Empty
             if (msg.isEmpty()) {
+                //if Empty throws an exception
                 throw new MoodAnalysisException(EMPTY_ERROR);
-            } else if (msg.equals("I am in Sad Mood")||msg.equals("I am in Any Mood")) {
+            } else if (msg.equals("I am in Sad Mood") || msg.equals("I am in Any Mood")) {
                 MoodAnalyser obj = new MoodAnalyser(msg);
-                System.out.println( obj.analyseMood());
-            } else throw new MoodAnalysisException(NULL_ERROR);
-        }
-        catch (Exception e) {
+                System.out.println(obj.analyseMood());
+            } else {//apart from defined String if anything else is inserted then throws a null error
+                throw new MoodAnalysisException(NULL_ERROR);
+            }
+        } catch (Exception e) {
             System.out.println("please Enter Valid Mood " + e);
         }
     }

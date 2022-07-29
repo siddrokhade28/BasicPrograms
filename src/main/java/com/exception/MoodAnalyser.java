@@ -1,23 +1,25 @@
 package com.exception;
 
 public class MoodAnalyser {
-    String sad = "I am in Sad Mood";
-    String happy = "I am in Any Mood";
-    String msg;
+    //Defining Happy and Sad String
+    private static final String sad = "I am in Sad Mood";
+    private static final String happy = "I am in Any Mood";
+    String message;
 
-    public MoodAnalyser(String msg) {
-        this.msg = msg;
+    //parameterized constructor to accept the value
+    public MoodAnalyser(String message) {
+        this.message = message;
     }
 
+    //function to check the message given by user
     public String analyseMood() {
         String value = null;
-        if (msg.equals(sad)) {
+        if (message.equals(sad)) {
             value = "SAD";
-        } else if (msg.equals(happy)) {
+        } else if (message.equals(happy)) {
             value = "HAPPY";
         }
         return value;
-
     }
 
 }
