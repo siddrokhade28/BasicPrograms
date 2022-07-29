@@ -2,8 +2,9 @@ package com.exception;
 
 class messeges {
      public static void main(String[] args) {
-         MoodAnalyser obj = new MoodAnalyser();
-         System.out.println(obj.analyseMood("I am in Any Mood"));
+         MoodAnalyser obj = new MoodAnalyser("I am in Any Mood");
+         System.out.println("the Mood is "+obj.analyseMood());
+         //System.out.println("the Mood is "+obj.analyseMood());
      }
 
 
@@ -11,7 +12,16 @@ class messeges {
  class MoodAnalyser{
      String sad="I am in Sad Mood";
      String happy="I am in Any Mood";
-     public String   analyseMood(String msg){
+     String msg;
+
+     public MoodAnalyser() {
+     }
+
+     public MoodAnalyser(String msg) {
+         this.msg = msg;
+     }
+
+     public String analyseMood(){
          String value=null;
          if(msg.equals(sad)){
              value="SAD";
@@ -20,5 +30,6 @@ class messeges {
              value="Happy";
          }
          return value;
+
  }
 }
