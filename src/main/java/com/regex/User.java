@@ -13,9 +13,15 @@ public class User {
     }
 
     public void setPassword(String password) {
-        if (Validator.isValidPassword(password)){
-            this.password = password;
-        } else System.out.println("Enter valid password");
+        try {
+
+
+            if (Validator.isValidPassword(password)) {
+                this.password = password;
+            } else throw new CustomException("Enter valid password");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public String getPhn() {
@@ -23,9 +29,13 @@ public class User {
     }
 
     public void setPhn(String phn) {
-        if (Validator.isValidPhoneNo(phn)) {
-            Phn = phn;
-        } else System.out.println("Enter valid phone Number");
+        try {
+            if (Validator.isValidPhoneNo(phn)) {
+                Phn = phn;
+            } else throw new CustomException("Enter valid phone Number");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public String getEmail() {
@@ -33,9 +43,13 @@ public class User {
     }
 
     public void setEmail(String email) {
-        if (Validator.isValidEmail(email)) {
-            this.email = email;
-        } else System.out.println("Enter Valid email");
+        try {
+            if (Validator.isValidEmail(email)) {
+                this.email = email;
+            } else throw new CustomException("Enter Valid email");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public String getFirstName() {
@@ -43,10 +57,14 @@ public class User {
     }
 
     public void setFirstName(String firstName) {
-        if (Validator.isValidName(firstName)) {
-            this.firstName = firstName;
-        } else {
-            System.out.println("Enter Valid First name");
+        try {
+            if (Validator.isValidName(firstName)) {
+                this.firstName = firstName;
+            } else {
+                throw new CustomException("Enter Valid First name");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
@@ -55,12 +73,16 @@ public class User {
     }
 
     public void setLastName(String lastName) {
-        if (Validator.isValidName(lastName)) {
-            this.lastName = lastName;
-        } else {
-            System.out.println("Enter Valid Last name");
-        }
+        try {
+            if (Validator.isValidName(lastName)) {
+                this.lastName = lastName;
+            } else {
+                throw new CustomException("Enter Valid Last name");
+            }
 
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     @Override
