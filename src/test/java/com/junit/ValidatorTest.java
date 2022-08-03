@@ -1,11 +1,10 @@
 package com.junit;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class JunitTest {
-    Junit junit = new Junit();
+    Validator junit = new Validator();
 
     @Test
     public void givenStringWhenCheckedShouldReturnBoolean() {
